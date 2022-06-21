@@ -1,0 +1,41 @@
+.subject {
+    @extend %section;
+    padding-top: 0;
+
+        &__container {
+            @extend %container;
+        }
+}
+
+
+.subject__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subject__item {
+    display: flex;
+    position: relative;
+}
+
+.subject__title {
+    @extend %sectionTitle;
+}
+
+.subject__label {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    color: $totallWhite;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $subjectLabelColor;
+}

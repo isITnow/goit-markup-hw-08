@@ -1,0 +1,36 @@
+.social-network {
+    display: flex;
+}
+
+.social-network__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-network__link {
+    display: inline-block;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    background-color: inherit;
+    transition: background-color $transitionTimeArgument;
+
+        &:hover,
+        &:focus {
+            background-color: $accentColor;
+            }
+}
+
+.social-network__icon {
+    fill: $iconColor;
+    transition: fill $transitionTimeArgument;
+
+        .social-network__link:hover &,
+        .social-network__link:focus & {
+            fill: $totallWhite;
+        }
+} 
+
+
+

@@ -1,0 +1,61 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $backgroundColor;
+}
+
+.footer__container {
+    @extend %container;
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__adress {
+    margin-top: 20px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.footer__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.footer__logo {
+    display: block;
+    color: $totallWhite;
+}
+
+.footer__link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+
+        &--white {
+            color: $totallWhite;
+            text-decoration: none;
+        }
+}
+
+.social-wraper {
+    margin-left: 70px;
+}
+
+.social-wraper__title,
+.signup__title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $totallWhite;
+}
+
+.social-network__link--background-reverse {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-network__icon--white {
+    fill: $totallWhite;
+}
+

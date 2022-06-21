@@ -1,0 +1,47 @@
+.client {
+    @extend %section;
+
+        &__container {
+        @extend %container;
+    }
+}
+
+.client__title {
+    @extend %sectionTitle;
+}
+
+.client__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.client__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid $iconColor;
+    border-radius: 4px;
+    transition: border $transitionTimeArgument;
+
+        &:hover,
+        &:focus {
+            border-color: $accentColor;
+        }
+}
+
+.client__icon {
+    fill: $iconColor;
+    transition: fill $transitionTimeArgument;
+
+        .client__link:hover &,
+        .client__link:focus & {
+            fill: $accentColor;
+        }
+}
+
+
+

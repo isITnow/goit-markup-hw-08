@@ -1,0 +1,52 @@
+.specifics {
+    @extend %section;
+
+        &__container {
+            @extend %container;
+        }
+}
+
+
+
+.specifics__header {
+    @extend %is-hidden;
+}
+
+.specifics__list {
+    display: flex;
+}
+
+.specifics__item {
+    margin-right: 30px;
+    width: calc((100% - 90px) / 4);
+
+        &:last-child {
+            margin-right: 0;
+        }
+}
+
+.specifics__thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+
+    border-radius: 4px;
+    background-color: $lightBackground;
+}
+
+.specifics__title {
+    margin-bottom: 10px;
+
+    color: $titleTextColor;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.specifics__desc {
+    font-size: 14px;
+    line-height: 1.71;
+}
