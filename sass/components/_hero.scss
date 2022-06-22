@@ -1,9 +1,5 @@
 .hero {
-    @extend %section;
-    max-width: 1600px;
-    // width: 100%;
-    max-height: 600px;
-    padding-top: 200px;
+    padding: 118px 0;
     margin-left: auto;
     margin-right: auto;
     background-color: $heroBackground;
@@ -14,6 +10,20 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+@media screen and (min-width: 480px) {
+    width: 480px;
+}
+
+@media screen and (min-width: 768px) {
+    width: 768px;
+}
+
+@media screen and (min-width: 1200px) {
+    width: 100%;
+    max-width: 1600px;
+    padding: 200px 0;
+}
 }
 
 .hero__headline {
@@ -21,10 +31,15 @@
 
     color: $totallWhite;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
 
 .hero__button {
