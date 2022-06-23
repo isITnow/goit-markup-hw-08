@@ -1,0 +1,117 @@
+.menu-btn {
+    display: inline-flex;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    z-index: 3;
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+
+    &__icon-cross {
+        display: none;
+    }
+
+    &.is-open .menu-btn__icon-cross {
+        display: block;
+    }
+
+    &.is-open .menu-btn__icon-menu {
+        display: none;
+    }
+}
+
+.menu-btn:active .menu-btn__icon-cross,
+.menu-btn:focus .menu-btn__icon-cross,
+.menu-btn:active .menu-btn__icon-menu,
+.menu-btn:focus .menu-btn__icon-menu {
+    fill: $accentColor;
+}
+
+.mob-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 48px 35px;
+    background-color: $totallWhite;
+
+    transform: translateX(-100%);
+    transition: transform $transitionTimeArgument;
+
+    z-index: 2;
+
+    @media screen and (max-width:767px) {
+        &.is-open {
+            transform: translateX(0);
+        }
+    }
+}
+
+.mob-menu__navigation {
+    margin-bottom: 302px;
+}
+
+.mob-menu__item:not(:last-child),
+.mob-contact__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mob-menu__link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $titleTextColor;
+
+    &--current {
+        color: $accentColor;
+    }
+}
+
+.mob-contact {
+    margin-bottom: 64px;
+}
+
+.mob-contact__link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $primeryTextColor;
+
+    &--accent {
+        font-size: 34px;
+        line-height: 1.17;
+        color: $accentColor;
+    }
+}
+
+.mob-network {
+    display: flex;
+
+    &__item:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &__item:nth-child(n + 2) {
+        padding-left: 10px;
+    }
+}
+
+.mob-network__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $accentColor;
+}

@@ -1,6 +1,10 @@
 .contact {
-    display: flex;
-    margin-left: auto;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        margin-left: auto;
+    }
 }
 
 .contact__item:not(:last-child) {
@@ -22,7 +26,8 @@
 
     &:hover,
     &:focus {
-            color: $accentColor; }
+        color: $accentColor;
+    }
 }
 
 .contact__icon {
@@ -32,5 +37,6 @@
 
     .contact__link:hover &,
     .contact__link:focus & {
-            fill: $accentColor;}
+        fill: $accentColor;
+    }
 }
