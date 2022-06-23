@@ -1,61 +1,99 @@
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: $backgroundColor;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $backgroundColor;
 }
 
 .footer__container {
-    @extend %container;
-    display: flex;
+  @extend %container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: baseline;
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer__adress {
-    margin-top: 20px;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
+  margin-top: 20px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer__item:not(:last-child) {
-    margin-bottom: 9px;
+  margin-bottom: 9px;
 }
 
 .footer__logo {
-    display: block;
-    color: $totallWhite;
+  display: block;
+  color: $totallWhite;
 }
 
 .footer__link {
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
 
-        &--white {
-            color: $totallWhite;
-            text-decoration: none;
-        }
+  &--white {
+    color: $totallWhite;
+    text-decoration: none;
+  }
 }
 
 .social-wraper {
-    margin-left: 70px;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 165px;
+    text-align: center;
+  }
 }
 
-.social-wraper__title,
-.signup__title {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: $totallWhite;
+.social-wraper__title {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $totallWhite;
 }
 
 .social-network__link--background-reverse {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .social-network__icon--white {
-    fill: $totallWhite;
+  fill: $totallWhite;
 }
-

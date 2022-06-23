@@ -1,46 +1,68 @@
 .signup {
-    margin-left: auto;
+  // margin-left: auto;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
+.signup__title {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $totallWhite;
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 60px;
+  }
 }
 
 .signup__label {
-    @extend %is-hidden;
+  @extend %is-hidden;
 }
 
 .signup__input {
-    display: inline-block;
-    height: 50px;
-    width: 358px;
-    padding: 15px;
-    margin-right: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    background-color: $backgroundColor;
-    color: $totallWhite;
+  display: inline-block;
+  height: 50px;
+  width: 358px;
+  padding: 15px;
+  //   margin-right: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: $backgroundColor;
+  color: $totallWhite;
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+    width: 100%;
+  }
 }
 
 .signup__button {
-    @extend %button;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  @extend %button;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-    padding: 10px 28px;
-    height: 50px;
+  padding: 10px 28px;
+  height: 50px;
 
-    font-weight: 700;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    color: $totallWhite;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background-color: $accentColor;
-    transition: background-color $transitionTimeArgument;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $totallWhite;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: $accentColor;
+  transition: background-color $transitionTimeArgument;
 
-        &:hover {
-            background-color: $buttonHover;
-        }
+  &:hover {
+    background-color: $buttonHover;
+  }
 }
 
 .signup__icon {
-    margin-left: 10px;
-    fill: $totallWhite;
+  margin-left: 10px;
+  fill: $totallWhite;
 }
