@@ -4,10 +4,10 @@
     width: 100%;
     margin: 0 auto;
 
-        &__form {
-            display: flex;
-            flex-direction: column;
-        }
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .feedback__title {
@@ -19,6 +19,7 @@
     font-size: 20px;
     line-height: 1.15;
     letter-spacing: 0.03em;
+    text-align: center;
     color: $titleTextColor;
 }
 
@@ -36,10 +37,10 @@
     fill: $totallBlack;
     transition: fill $transitionTimeArgument;
 
-        .feedback__input:hover+&,
-        .feedback__input:focus+& {
-            fill: $accentColor;
-        }
+    .feedback__input:hover+&,
+    .feedback__input:focus+& {
+        fill: $accentColor;
+    }
 }
 
 .feedback__label {
@@ -61,15 +62,19 @@
     outline: transparent;
     transition: border-color $transitionTimeArgument;
 
-        &:hover,
-        &:focus {
-            border-color: $accentColor;
-        }
+    &:hover,
+    &:focus {
+        border-color: $accentColor;
+    }
 }
 
 .feedback__input--big {
     height: 120px;
     padding: 12px 16px;
+
+    // @media screen and (max-width:1199px) and (orientation: landscape) {
+    //     height: 60px;
+    // }
 }
 
 .feedback__input::placeholder {
@@ -95,8 +100,13 @@ textarea {
 .feedback__policy-label {
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 11px;
+    line-height: 1.66;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .feedback__link {
@@ -118,21 +128,20 @@ textarea {
     border: 2px solid #000000;
     border-radius: 2px;
 
-        .feedback__checkbox:checked+& {
-            border-color: transparent;
-        }
+    .feedback__checkbox:checked+& {
+        border-color: transparent;
+    }
 }
 
 .feedback__check-icon {
     opacity: 0;
     transform: scale(1);
-    transition: opacity $transitionTimeArgument,
-        transform $transitionTimeArgument;
+    transition: opacity $transitionTimeArgument, transform $transitionTimeArgument;
 
-        .feedback__checkbox:checked+.feedback__icon-wrap>& {
-                opacity: 1;
-                transform: scale(1.4);
-            }
+    .feedback__checkbox:checked+.feedback__icon-wrap>& {
+        opacity: 1;
+        transform: scale(1.4);
+    }
 }
 
 .feedback__button {
@@ -150,7 +159,7 @@ textarea {
     background-color: $accentColor;
     transition: background-color $transitionTimeArgument;
 
-        &:hover {
-            background-color: $buttonHover;
-        }
+    &:hover {
+        background-color: $buttonHover;
+    }
 }

@@ -7,8 +7,10 @@
     background-color: $backdropBGcolor;
     opacity: 1;
     visibility: visible;
-    transition: opacity $transitionTimeArgument,
-        visibility $transitionTimeArgument;
+    transition: opacity $transitionTimeArgument, visibility $transitionTimeArgument;
+
+    padding: 94px 15px;
+    overflow-y: scroll;
 }
 
 .backdrop--is-hidden {
@@ -18,24 +20,36 @@
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    position: relative;
 
-    width: 528px;
     padding: 40px;
     border-radius: 4px;
     background-color: $totallWhite;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14),
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
 
     transition: transform $transitionTimeArgument;
 
-        .backdrop--is-hidden & {
-            transform: translate(-50%, -50%) scale(1.1);
+    .backdrop--is-hidden & {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        max-width: 450px;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+
+        @media screen and (max-width:1199px) and (orientation: landscape) {
+            top: 80%;
         }
+
+        @media screen and (min-width: 1200px) {
+            max-width: 528px;
+        }
+    }
 }
 
 .modal__button {
@@ -58,8 +72,7 @@
     fill: currentColor;
     transition: fill $transitionTimeArgument;
 
-        .modal__button:hover & {
-            fill: $accentColor;
-        }
+    .modal__button:hover & {
+        fill: $accentColor;
+    }
 }
-
