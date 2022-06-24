@@ -1,11 +1,11 @@
 .team {
     padding: 60px 0;
     background-color: $lightBackground;
-    
+
     @media screen and (min-width: 1200px) {
         padding: 94px 0;
     }
-    
+
 }
 
 .team__container {
@@ -26,7 +26,7 @@
 
 .team__title {
     margin-bottom: 30px;
-        
+
     color: $titleTextColor;
     font-size: 28px;
     line-height: 1.17;
@@ -43,52 +43,55 @@
         display: flex;
         flex-wrap: wrap;
     }
+
     @media screen and (min-width: 1200px) {
         display: flex;
         flex-wrap: nowrap;
-        }
+    }
 }
 
 .team__item {
     background-color: $totallWhite;
     box-shadow: 0px 2px 2px 1px #00000033,
-    0px 1px 2px 1px #00000024,
-    0px 1px 4px 1px #0000001F;
+        0px 1px 2px 1px #00000024,
+        0px 1px 4px 1px #0000001F;
     border-radius: 4px;
 
     @media screen and (max-width: 767px) {
         &:not(:last-child) {
             margin-bottom: 30px;
-            }
+        }
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: calc((100% - 30px) / 2);
 
         margin-right: 30px;
+
         &:nth-child(2n) {
             margin-right: 0;
-            }
+        }
 
         &:nth-child(-n + 2) {
             margin-bottom: 30px;
-            }
         }
+    }
 
     @media screen and (min-width: 1200px) {
         width: calc((100% - 90px) / 4);
         margin-right: 30px;
+
         &:last-child {
-        margin-right: 0;
-            }
+            margin-right: 0;
         }
+    }
 }
 
-.team__pic {
-    display: block;
-    width: 100%;
-    height: auto;
-}
+// .team__pic {
+//     display: block;
+//     width: 100%;
+//     height: auto;
+// }
 
 .team__info {
     display: flex;

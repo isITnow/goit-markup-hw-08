@@ -498,12 +498,6 @@ img {
   }
 }
 
-.team__pic {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .team__info {
   display: flex;
   flex-direction: column;
