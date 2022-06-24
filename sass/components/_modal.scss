@@ -30,6 +30,8 @@
 
     transition: transform $transitionTimeArgument;
 
+    z-index: 5;
+
     .backdrop--is-hidden & {
         transform: translate(-50%, -50%) scale(1.1);
     }
@@ -42,7 +44,7 @@
         left: 50%;
         transform: translate(-50%, -50%) scale(1);
 
-        @media screen and (max-width:1199px) and (orientation: landscape) {
+        @media screen and (orientation: landscape) and (max-width:1199px) {
             top: 80%;
         }
 
