@@ -227,7 +227,6 @@ img {
 @media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-tablet.jpg");
-    max-width: 768px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
@@ -829,6 +828,7 @@ img {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 94px 15px;
   overflow-y: scroll;
+  z-index: 5;
 }
 
 .backdrop--is-hidden {
@@ -844,7 +844,6 @@ img {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 5;
 }
 .backdrop--is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.1);
@@ -857,11 +856,6 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-  }
-}
-@media screen and (min-width: 768px) and (orientation: landscape) and (max-width: 1199px) {
-  .modal {
-    top: 80%;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
@@ -1155,11 +1149,6 @@ textarea {
 }
 .project__link:hover .project__overlay, .project__link:focus .project__overlay {
   transform: translateY(0);
-}
-
-.project__img {
-  width: 100%;
-  display: block;
 }
 
 .project__thumb {

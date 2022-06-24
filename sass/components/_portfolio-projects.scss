@@ -12,8 +12,8 @@
     box-shadow: none;
     transition: box-shadow $transitionTimeArgument;
 
-        &:hover,
-        &:focus {
+    &:hover,
+    &:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
             0px 4px 4px rgba(0, 0, 0, 0.06),
             1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -22,7 +22,7 @@
     @media screen and (min-width: 768px) {
         width: calc((100% - 60px) / 2);
     }
-    
+
     @media screen and (min-width: 1200px) {
         width: calc((100% - 90px) / 3);
     }
@@ -48,16 +48,12 @@
     transform: translateY(100%);
     transition: transform $transitionTimeArgument;
 
-        .project__link:hover &,
-        .project__link:focus & {
-            transform: translateY(0);
-        }
+    .project__link:hover &,
+    .project__link:focus & {
+        transform: translateY(0);
+    }
 }
 
-.project__img {
-    width: 100%;
-    display: block;
-}
 
 .project__thumb {
     position: relative;

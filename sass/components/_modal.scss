@@ -11,6 +11,8 @@
 
     padding: 94px 15px;
     overflow-y: scroll;
+
+    z-index: 5;
 }
 
 .backdrop--is-hidden {
@@ -30,8 +32,6 @@
 
     transition: transform $transitionTimeArgument;
 
-    z-index: 5;
-
     .backdrop--is-hidden & {
         transform: translate(-50%, -50%) scale(1.1);
     }
@@ -43,10 +43,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(1);
-
-        @media screen and (orientation: landscape) and (max-width:1199px) {
-            top: 80%;
-        }
 
         @media screen and (min-width: 1200px) {
             max-width: 528px;
