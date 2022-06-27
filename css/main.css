@@ -848,17 +848,17 @@ img {
 .backdrop--is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.1);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .modal {
-    position: absolute;
     max-width: 450px;
+    position: fixed;
     width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
   }
@@ -1234,6 +1234,9 @@ textarea {
   z-index: 2;
 }
 @media screen and (max-width: 767px) {
+  .mob-menu {
+    position: fixed;
+  }
   .mob-menu.is-open {
     transform: translateX(0);
   }
